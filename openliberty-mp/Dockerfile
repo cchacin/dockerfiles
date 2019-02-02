@@ -1,13 +1,12 @@
 FROM alpine:3.8 as builder
 
-ENV RELEASE 2018-11-21_0300
-ENV VERSION 18.0.0.4
-
+ENV RELEASE 2019-01-24_2339
+ENV VERSION 19.0.0.1
 RUN apk --update add --no-cache ca-certificates axel \
   && mkdir /opt \
-  && axel -n 10 https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/${RELEASE}/openliberty-${VERSION}.zip \
-  && unzip openliberty-${VERSION}.zip -d /opt \
-  && rm openliberty-${VERSION}.zip
+  && axel -n 10 https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/${RELEASE}/openliberty-webProfile8-${VERSION}.zip \
+  && unzip openliberty-webProfile8-${VERSION}.zip -d /opt \
+  && rm openliberty-webProfile8-${VERSION}.zip
 
 FROM cchacin/openjdk:11.0.1-runtime
 

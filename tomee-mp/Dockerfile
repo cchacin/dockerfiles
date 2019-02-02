@@ -1,16 +1,13 @@
 FROM alpine:3.8 as builder
 
-ENV RELEASE 2018-11-21_0300
-ENV VERSION 18.0.0.4
-
 ENV PATH /usr/local/tomee/bin:$PATH
 RUN mkdir -p /usr/local/tomee
 
 RUN apk --update add --no-cache ca-certificates axel
 
-RUN axel -n 10 http://ftp.wayne.edu/apache/tomee/tomee-8.0.0-M1/apache-tomee-8.0.0-M1-microprofile.tar.gz -o /tmp/tomee.tar.gz \
+RUN axel -n 10 http://ftp.wayne.edu/apache/tomee/tomee-8.0.0-M2/apache-tomee-8.0.0-M2-microprofile.tar.gz -o /tmp/tomee.tar.gz \
   && tar -zxf /tmp/tomee.tar.gz \
-  && mv apache-tomee-microprofile-8.0.0-M1/* /usr/local/tomee
+  && mv apache-tomee-microprofile-8.0.0-M2/* /usr/local/tomee
 
 
 FROM cchacin/openjdk:11.0.1-runtime
