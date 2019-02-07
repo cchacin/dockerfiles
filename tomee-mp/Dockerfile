@@ -9,8 +9,7 @@ RUN axel -n 10 http://ftp.wayne.edu/apache/tomee/tomee-8.0.0-M2/apache-tomee-8.0
   && tar -zxf /tmp/tomee.tar.gz \
   && mv apache-tomee-microprofile-8.0.0-M2/* /usr/local/tomee
 
-
-FROM cchacin/openjdk:11.0.1-runtime
+FROM cchacin/openjdk:11.0.2-jre
 
 ENV PATH /usr/local/tomee/bin:$PATH
 

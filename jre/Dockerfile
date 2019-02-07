@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:11.0.1 as openjdkbuilder
+FROM adoptopenjdk/openjdk11-openj9:x86_64-alpine-jdk-11.0.2.9 as openjdkbuilder
 
 RUN jlink \
      --module-path /opt/java/openjdk/jmods \

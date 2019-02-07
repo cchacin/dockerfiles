@@ -1,5 +1,5 @@
 IMAGENAME := cchacin/openjdk
-OPENJDK_VERSION := 11.0.1
+OPENJDK_VERSION := 11.0.2
 MAVEN_VERSION := 3.6.0
 
 SUBDIRS = jre openliberty-mp tomee-mp
