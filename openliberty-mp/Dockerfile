@@ -1,4 +1,4 @@
-FROM alpine:3.8 as builder
+FROM alpine:3.9 as builder
 
 ENV RELEASE 2019-01-24_2339
 ENV VERSION 19.0.0.1

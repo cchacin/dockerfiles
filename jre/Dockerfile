@@ -9,7 +9,7 @@ RUN jlink \
      --no-man-pages \
      --output /opt/java/openjdk-minimal
 
-FROM alpine:3.8
+FROM alpine:3.9
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en

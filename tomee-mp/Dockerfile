@@ -1,4 +1,4 @@
-FROM alpine:3.8 as builder
+FROM alpine:3.9 as builder
 
 ENV PATH /usr/local/tomee/bin:$PATH
 RUN mkdir -p /usr/local/tomee
